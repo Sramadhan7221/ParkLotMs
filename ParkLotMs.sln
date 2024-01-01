@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParkLotMs.Infrastructure", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParkLotMs.Logging", "ParkLotMs.Logging\ParkLotMs.Logging.csproj", "{A1B76239-3470-47D4-84B9-70A07B196E57}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParkLotMs.Sql", "ParkLotMs.Sql\ParkLotMs.Sql.csproj", "{FBB3F6E1-B4F8-4C8E-8780-A8EC0376CF7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParkLotMs.DataAccess", "ParkLotMs.Sql\ParkLotMs.DataAccess.csproj", "{FBB3F6E1-B4F8-4C8E-8780-A8EC0376CF7D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkLotMs.Persistence", "ParkLotMs.Persistence\ParkLotMs.Persistence.csproj", "{2DED7465-E705-4C15-B6B1-CE8F65AE472D}"
 EndProject

@@ -1,3 +1,5 @@
+using ParkLotMs.Application;
+using ParkLotMs.DataAccess.DbAccess;
 using ParkLotMs.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +12,7 @@ builder.Services.AddDatabasePostgreSQL(builder.Configuration, "DefaultConnection
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddApplicationServices(builder.Configuration);
 
 var app = builder.Build();
 
