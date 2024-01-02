@@ -11,8 +11,9 @@ public class ParkingArea:BaseEntityClass
     public string Descriptions { get; set; }
     public decimal MaxCapacity { get; set; }
     [ForeignKey("VehicleType")]
-    public Guid VehicleType { get;set; }
+    public Guid TypeId { get;set; }
     public string Status { get; set; }
     public virtual VehicleType Type { get; set; }
+    public virtual string VehicleName { get; set; }
     public virtual ICollection<ParkingSlot> ParkingSlots { get; set; }
 }

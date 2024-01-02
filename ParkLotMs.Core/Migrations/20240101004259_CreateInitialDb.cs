@@ -39,7 +39,6 @@ namespace ParkLotMs.Core.Migrations
                     Name = table.Column<string>(type: "character varying(255)", maxLength: 255, nullable: true),
                     Descriptions = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: true),
                     MaxCapacity = table.Column<decimal>(type: "numeric", nullable: false),
-                    VehicleType = table.Column<Guid>(type: "uuid", nullable: false),
                     Status = table.Column<string>(type: "text", nullable: true),
                     TypeId = table.Column<Guid>(type: "uuid", nullable: true),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),

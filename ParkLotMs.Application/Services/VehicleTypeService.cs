@@ -43,13 +43,13 @@ public class VehicleTypeService : IVehicleTypeService
         return _dataAccess.SaveData(query, new {id = Guid.NewGuid() ,name = request.Name, desc = request.Description, max = request.MaxParkingFee, min = request.MinParkingFee, prog = request.ProgParkingFee, createdBy = request.CreatedBy, createdAt = DateTime.UtcNow });
     }
 
-
     public Task UpdateData(UpdateVehicleTypeRequest request)
     {
-        var query = $"UPDATE \"VehicleTypes\" SET \"Name\" = @name ,\"Description\" = @desc ,\"MaxParkingFee\" = @max ,\"MinParkingFee\" = @min ,\"ProgParkingFee\" = @prog ,\"UpdatedBy\" = @updatedBy ,\"UpdatedAt\" = @updateAt ";
+        var query = $"UPDATE \"VehicleTypes\" SET \"Name\" = COALESCE(@name,\"Name\") ,\"Description\" = COALESCE(@desc,\"Description\") ,\"MaxParkingFee\" = COALESCE(@max,\"MaxParkingFee\") ,\"MinParkingFee\" = COALESCE(@min,\"MinParkingFee\") ,\"ProgParkingFee\" = COALESCE(@prog,\"ProgParkingFee\") ,\"UpdatedBy\" = @updatedBy ,\"UpdatedAt\" = @updateAt WHERE \"Id\" = @id";
 
         return _dataAccess.SaveData(query, new { id = request.Id, name = request.Name, desc = request.Description, max = request.MaxParkingFee, min = request.MinParkingFee, prog = request.ProgParkingFee, updatedBy = request.CreatedBy, updateAt = DateTime.UtcNow });
     }
+
     public Task DeleteData(Guid id, bool usingSoftDelete, string deleteBy)
     {
         var query = $"UPDATE \"VehicleTypes\" SET \"DeletedAt\" = @deleted, \"DeletedBy\" = @deleteBy WHERE \"Id\" = @id ";

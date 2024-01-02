@@ -7,5 +7,7 @@ namespace ParkLotMs.Application.Interfaces
     {
         Task<IEnumerable<ParkingAreaModel>> GetPakingAreas(ParkingAreaRequest request);
         Task InsertData(AddParkingAreaRequest request);
+        Task UpdateData(UpdateParkingAreaRequest request);
+        Task DeleteData(Guid id, bool usingSoftDelete, string deleteBy);
     }
 }

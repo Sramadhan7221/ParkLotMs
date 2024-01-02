@@ -14,8 +14,8 @@ public class ParkingAreaModel
     public decimal MaxCapacity { get; set; }
     [JsonPropertyName("status")]
     public string Status { get; set; }
-    [JsonPropertyName("type")]
-    public VehicleTypeModel Type { get; set; }
+    [JsonPropertyName("vehicle_name")]
+    public string VehicleName { get; set; }
     [JsonPropertyName("parking_slots")]
     public ICollection<ParkingSlotModel> ParkingSlots { get; set; }
 }

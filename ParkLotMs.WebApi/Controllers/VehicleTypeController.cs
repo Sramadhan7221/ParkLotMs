@@ -63,19 +63,10 @@ public class VehicleTypeController : ControllerBase
     }
 
     [HttpDelete]
-    [Route("/api/vehicle/delete")]
-    public IActionResult DeleteVehicle([FromBody] UpdateVehicleTypeViewModel request)
+    [Route("/api/vehicle/delete/{id}")]
+    public IActionResult DeleteVehicle(Guid id, bool usingSoftDelete)
     {
-        _vehicleService.UpdateData(new UpdateVehicleTypeRequest
-        {
-            Id = request.TypeId,
-            Name = request.TypeName,
-            Description = request.Description,
-            MaxParkingFee = request.MaxParkingFee,
-            MinParkingFee = request.MinParkingFee,
-            ProgParkingFee = request.ProgParkingFee,
-            CreatedBy = "Test"
-        });
+        _vehicleService.DeleteData(id, usingSoftDelete, "Test");
 
         return Ok();
     }

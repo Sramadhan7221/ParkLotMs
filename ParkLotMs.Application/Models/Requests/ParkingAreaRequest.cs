@@ -20,3 +20,8 @@ public class AddParkingAreaRequest
     public Status Status { get; set; }
     public string CreatedBy { get; set; }
 }
+
+public class UpdateParkingAreaRequest : AddParkingAreaRequest
+{
+    public Guid Id { get; set; }
+}

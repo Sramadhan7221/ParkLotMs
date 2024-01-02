@@ -40,4 +40,38 @@ public class ParkingAreaController : ControllerBase
 
         return Ok();
     }
+
+    [HttpPut]
+    [Route("/api/parking-area/update")]
+    public IActionResult UpdateParkingArea([FromBody] UpdateParkingAreaViewModel request)
+    {
+        if (Enum.TryParse(request.Status, out Status parsedEnum))
+        {
+            _parkingAreaService.UpdateData(new UpdateParkingAreaRequest
+            {
+                Name = request.AreaName,
+                Descriptions = request.Description,
+                MaxCapacity = request.Max,
+                VehicleType = request.TypeId,
+                CreatedBy = "Test",
+                Status = parsedEnum,
+
+            });
+        }
+        else
+        {
+            return BadRequest(new {Message = "Incorrect Status"});
+        }
+
+        return Ok();
+    }
+
+    [HttpDelete]
+    [Route("/api/parking-area/delete/{id}")]
+    public IActionResult DeleteArea(Guid id, bool usingSoftDelete)
+    {
+        _parkingAreaService.DeleteData(id, usingSoftDelete, "Test");
+
+        return Ok();
+    }
 }

@@ -14,3 +14,11 @@ public class InsertParkingAreaViewModel
     [JsonPropertyName("type_id")]
     public Guid TypeId { get; set; }
 }
+
+public class UpdateParkingAreaViewModel: InsertParkingAreaViewModel
+{
+    [JsonPropertyName("area_id")]
+    public Guid AreaId { get; set; }
+    [JsonPropertyName("status")]
+    public string Status { get; set; }
+}
