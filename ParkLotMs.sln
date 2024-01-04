@@ -9,13 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParkLotMs.Application", "Pa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParkLotMs.Core", "ParkLotMs.Core\ParkLotMs.Core.csproj", "{8A545237-654B-4D36-ACA2-3122BB693FDA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParkLotMs.Infrastructure", "ParkLotMs.Infrastructure\ParkLotMs.Infrastructure.csproj", "{4F994910-C447-4FEF-9117-EE5E164B89CA}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParkLotMs.Logging", "ParkLotMs.Logging\ParkLotMs.Logging.csproj", "{A1B76239-3470-47D4-84B9-70A07B196E57}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParkLotMs.DataAccess", "ParkLotMs.Sql\ParkLotMs.DataAccess.csproj", "{FBB3F6E1-B4F8-4C8E-8780-A8EC0376CF7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkLotMs.Persistence", "ParkLotMs.Persistence\ParkLotMs.Persistence.csproj", "{2DED7465-E705-4C15-B6B1-CE8F65AE472D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParkLotMs.Persistence", "ParkLotMs.Persistence\ParkLotMs.Persistence.csproj", "{2DED7465-E705-4C15-B6B1-CE8F65AE472D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkLotMs.DataSeeder", "ParkLotMs.DataSeeder\ParkLotMs.DataSeeder.csproj", "{B4977CBC-2E6F-4742-946C-591B2EC1022A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkLotMs.Test", "ParkLotMs.Test\ParkLotMs.Test.csproj", "{812E8BAD-86B3-4B50-87E3-FBC00783631E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,14 +35,6 @@ Global
 		{8A545237-654B-4D36-ACA2-3122BB693FDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A545237-654B-4D36-ACA2-3122BB693FDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A545237-654B-4D36-ACA2-3122BB693FDA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4F994910-C447-4FEF-9117-EE5E164B89CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4F994910-C447-4FEF-9117-EE5E164B89CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4F994910-C447-4FEF-9117-EE5E164B89CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4F994910-C447-4FEF-9117-EE5E164B89CA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A1B76239-3470-47D4-84B9-70A07B196E57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A1B76239-3470-47D4-84B9-70A07B196E57}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A1B76239-3470-47D4-84B9-70A07B196E57}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A1B76239-3470-47D4-84B9-70A07B196E57}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FBB3F6E1-B4F8-4C8E-8780-A8EC0376CF7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FBB3F6E1-B4F8-4C8E-8780-A8EC0376CF7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBB3F6E1-B4F8-4C8E-8780-A8EC0376CF7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +43,14 @@ Global
 		{2DED7465-E705-4C15-B6B1-CE8F65AE472D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DED7465-E705-4C15-B6B1-CE8F65AE472D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DED7465-E705-4C15-B6B1-CE8F65AE472D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4977CBC-2E6F-4742-946C-591B2EC1022A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4977CBC-2E6F-4742-946C-591B2EC1022A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4977CBC-2E6F-4742-946C-591B2EC1022A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4977CBC-2E6F-4742-946C-591B2EC1022A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{812E8BAD-86B3-4B50-87E3-FBC00783631E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{812E8BAD-86B3-4B50-87E3-FBC00783631E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{812E8BAD-86B3-4B50-87E3-FBC00783631E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{812E8BAD-86B3-4B50-87E3-FBC00783631E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
