@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ParkLotMs.Application.Interfaces;
@@ -9,6 +10,7 @@ using ParkLotMs.WebApi.ViewModels;
 
 namespace ParkLotMs.WebApi.Controllers;
 
+[Authorize]
 public class VehicleTypeController : ControllerBase
 {
     private readonly IVehicleTypeService _vehicleService;

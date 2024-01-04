@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using ParkLotMs.Application.Interfaces;
 using ParkLotMs.Application.Models.Requests;
 using ParkLotMs.DataAccess.Models;
@@ -6,6 +7,7 @@ using ParkLotMs.WebApi.ViewModels;
 
 namespace ParkLotMs.WebApi.Controllers;
 
+[Authorize]
 public class ParkingAreaController : ControllerBase
 {
     private readonly IParkingAreaServices _parkingAreaService;
