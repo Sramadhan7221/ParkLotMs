@@ -7,7 +7,7 @@ using ParkLotMs.WebApi.ViewModels;
 
 namespace ParkLotMs.WebApi.Controllers;
 
-[Authorize]
+//[Authorize]
 public class ParkingAreaController : ControllerBase
 {
     private readonly IParkingAreaServices _parkingAreaService;
@@ -69,7 +69,7 @@ public class ParkingAreaController : ControllerBase
     }
 
     [HttpDelete]
-    [Route("/api/parking-area/delete/{id}")]
+    [Route("/api/parking-area/delete/{id}"), Authorize(Roles = "Superadmin")]
     public IActionResult DeleteArea(Guid id, bool usingSoftDelete)
     {
         _parkingAreaService.DeleteData(id, usingSoftDelete, "Test");

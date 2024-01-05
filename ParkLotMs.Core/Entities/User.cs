@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ParkLotMs.Core.Entities;
-public enum Role { Admin };
+public enum Role { Admin, Superadmin };
 public class User : BaseEntityClass
 {
     public string Username { get; set; }

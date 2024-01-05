@@ -7,11 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Responses\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="6.0.25" />
+    <PackageReference Include="Microsoft.IdentityModel" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>

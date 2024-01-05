@@ -1,6 +1,6 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ParkLotMs.DataAccess.Models;
+namespace ParkLotMs.Application.Models.Responses;
 
 public class ParkingBillingModel
 {
@@ -12,5 +12,4 @@ public class ParkingBillingModel
     public DateTime? CheckIn { get; set; }
     public DateTime? CheckOut { get; set; }
     public decimal ParkingCost { get; set; }
-
 }

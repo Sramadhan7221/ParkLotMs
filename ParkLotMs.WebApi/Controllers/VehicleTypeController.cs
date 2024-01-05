@@ -10,7 +10,7 @@ using ParkLotMs.WebApi.ViewModels;
 
 namespace ParkLotMs.WebApi.Controllers;
 
-[Authorize]
+//[Authorize]
 public class VehicleTypeController : ControllerBase
 {
     private readonly IVehicleTypeService _vehicleService;
@@ -65,7 +65,7 @@ public class VehicleTypeController : ControllerBase
     }
 
     [HttpDelete]
-    [Route("/api/vehicle/delete/{id}")]
+    [Route("/api/vehicle/delete/{id}"), Authorize(Roles = "Superadmin")]
     public IActionResult DeleteVehicle(Guid id, bool usingSoftDelete)
     {
         _vehicleService.DeleteData(id, usingSoftDelete, "Test");

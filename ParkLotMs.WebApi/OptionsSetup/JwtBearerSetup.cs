@@ -3,6 +3,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using ParkLotMs.Infrastructure.Authentication;
 using System.Text;
+using static System.Net.WebRequestMethods;
 
 namespace ParkLotMs.WebApi.OptionsSetup;
 

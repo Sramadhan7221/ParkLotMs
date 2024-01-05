@@ -13,6 +13,7 @@ public static class AppDataAccessExtension
         services.AddSingleton<ISqlDataAccess, SqlDataAccess>(options => new SqlDataAccess(configuration));
         services.AddScoped<IVehicleTypeService, VehicleTypeService>();
         services.AddScoped<IParkingAreaServices, ParkingAreaServices>();
+        services.AddScoped<IParkingBillingServices, ParkingBillingServices>();
 
         return services;
     }

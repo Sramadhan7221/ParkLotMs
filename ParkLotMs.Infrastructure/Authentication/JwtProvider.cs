@@ -18,10 +18,10 @@ public class JwtProvider : IJwtProvider
 
     public string GenerateUser(User user)
     {
-        var claims = new Claim[] { 
-        new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
-        new Claim(JwtRegisteredClaimNames.Email, user.Email),
-        new Claim(JwtRegisteredClaimNames.Sub, user.Role.ToString())};
+        var claims = new List<Claim> { 
+        new Claim(ClaimTypes.Sid, user.Id.ToString()),
+        new Claim(ClaimTypes.Email, user.Email),
+        new Claim(ClaimTypes.Role, user.Role.ToString())};
 
         var signingCred = new SigningCredentials(
             new SymmetricSecurityKey(

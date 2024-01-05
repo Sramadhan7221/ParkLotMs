@@ -54,9 +54,32 @@ public class ParkingAreaServices : IParkingAreaServices
 
 	public Task InsertData(AddParkingAreaRequest request)
 	{
-		var query = $"INSERT INTO \"ParkingAreas\" (\"Id\",\"Name\",\"Descriptions\",\"MaxCapacity\",\"TypeId\",\"Status\",\"CreatedBy\",\"CreatedAt\") VALUES (@id,@name,@desc,@max,@type,@status,@createdBy,@createdAt)";
-		return _dataAccess.SaveData(query, new {id = Guid.NewGuid(), name = request.Name, desc = request.Descriptions, max = request.MaxCapacity, type = request.VehicleType, status = request.Status.ToString(), createdBy = request.CreatedBy, createdAt = DateTime.UtcNow});
-	}
+		var areaId = Guid.NewGuid();
+
+        var query = $"INSERT INTO \"ParkingAreas\" (\"Id\",\"Name\",\"Descriptions\",\"MaxCapacity\",\"TypeId\",\"Status\",\"CreatedBy\",\"CreatedAt\") VALUES (@id,@name,@desc,@max,@type,@status,@createdBy,@createdAt)";
+
+		var querySlot = $"INSERT INTO \"ParkingSlots\" (\"Id\",\"AreaId\",\"Name\",\"Status\",\"CreatedBy\",\"CreatedAt\") VALUES (@id,@areaId,@name,@status,@createdBy,@createdAt)";
+		var slots = new List<object>();
+
+		//for (int i = 0; i < request.MaxCapacity; i++)
+		//{
+		//	var slotsName = (i + 1).ToString();
+
+  //          slots.Add(new
+		//	{
+		//		id = Guid.NewGuid(),
+		//		areaId,
+		//		name = string.Concat(request.Name,"-",slotsName),
+		//		status = request.Status.ToString(),
+  //              createdBy = request.CreatedBy,
+  //              createdAt = DateTime.UtcNow
+  //          });
+		//}
+
+		return _dataAccess.SaveData(query, new { id = areaId, name = request.Name, desc = request.Descriptions, max = request.MaxCapacity, type = request.VehicleType, status = request.Status.ToString(), createdBy = request.CreatedBy, createdAt = DateTime.UtcNow });
+
+        //return _dataAccess.SaveData(querySlot, slots);
+    }
 
     public Task UpdateData(UpdateParkingAreaRequest request)
     {
